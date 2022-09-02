@@ -24,8 +24,9 @@ public class TC_AddCustomerTest_003 extends BaseClass{
 	AddCustomerPage addcustomer = new AddCustomerPage(driver);
 	
 	addcustomer.clickAddCustLink();
-	Thread.sleep(3000);
+	Thread.sleep(20000);
 	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='3rd party ad content']")));
+	driver.switchTo().frame(driver.findElement(By.id("ad_iframe")));
 	addcustomer.closePopUp();
 	driver.switchTo().defaultContent();
 	addcustomer.custname("Abc");
